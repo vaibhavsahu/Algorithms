@@ -18,14 +18,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         //File dest = File.createTempFile("Import" + "_" + new Date().getTime(), ".csv");
-
+//master
         Set<BulkOptins> bulkOptinsSet = new HashSet<>();
         bulkOptinsSet.add(new BulkOptins("test", 122333L, true));
         bulkOptinsSet.add(new BulkOptins("test", 122338L, true));
         bulkOptinsSet.add(new BulkOptins("test", 122334L, false));
         bulkOptinsSet.add(new BulkOptins("test1", 122335L, true));
         bulkOptinsSet.add(new BulkOptins("test1", 122336L, false));
-
+//master
         Map<String, List<Long>> map1 = bulkOptinsSet.stream().filter( b -> b.isOld() == true)
                 .collect(Collectors.groupingBy(BulkOptins::getName, Collectors.mapping(BulkOptins::getPhone, Collectors.toList())));
 
