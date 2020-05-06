@@ -30,7 +30,7 @@ public class Main {
                 .collect(Collectors.groupingBy(BulkOptins::getName, Collectors.mapping(BulkOptins::getPhone, Collectors.toList())));
 
         System.out.println(map1.keySet() + " " +map1.values());
-
+//master master
         //Map<City, Set<String>> namesByCity = people.stream().collect(groupingBy(Person::getCity, mapping(Person::getLastName, toSet())));
         //stream().collect(groupingBy(Function.identity()));
 //        Stream<Integer> j = Arrays.asList(1, 2, 3, 4, 5).stream();
